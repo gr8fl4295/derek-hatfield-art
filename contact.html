@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate icon" href="/favicon.ico" sizes="any"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact — Derek Hatfield Art</title><meta name="description" content="Contact Derek Hatfield for commissioned artwork, concert posters, and other art inquiries.">
 <style>
 :root{color-scheme:dark;--bg:#111315;--surface:#1b1e21;--text:#f0eee9;--muted:#a1a5a8;--line:#303438}
@@ -18,7 +18,13 @@ form button { border-radius:999px; }
 .logo{white-space:normal;min-width:0}
 .logo span{font-size:inherit;letter-spacing:inherit;line-height:1.15;margin-top:5px;white-space:normal;overflow-wrap:normal}
 @media(max-width:540px){.logo span{font-size:inherit;letter-spacing:inherit;margin-top:5px}header{flex-wrap:wrap}}
-</style></head><body><div class="layout"><header><a href="index.html" class="logo">DEREK HATFIELD<span>ILLUSTRATION &amp; GRAPHIC DESIGN</span></a><nav><a href="index.html#archive">Artwork</a><a href="contact.html" aria-current="page">Contact</a></nav></header>
+
+/* V36: explicitly stacked, shared brand lockup on both pages */
+header a.logo{display:flex;flex-direction:column;align-items:flex-start;gap:5px;white-space:normal;min-width:0;text-decoration:none}
+header a.logo .brand-name{display:block;font-size:inherit;line-height:1.15;font-weight:700;color:var(--text);white-space:nowrap}
+header a.logo .brand-subtitle{display:block;font-size:inherit;line-height:1.15;font-weight:400;letter-spacing:inherit;color:var(--muted);margin:0;white-space:normal}
+@media(max-width:540px){header a.logo{gap:5px}header a.logo .brand-subtitle{font-size:inherit;letter-spacing:inherit}}
+</style></head><body><div class="layout"><header><a href="index.html" class="logo"><span class="brand-name">DEREK HATFIELD</span><span class="brand-subtitle">ILLUSTRATION &amp; GRAPHIC DESIGN</span></a><nav><a href="index.html#archive">Artwork</a><a href="contact.html" aria-current="page">Contact</a></nav></header>
 <main><h1>Contact.</h1><p class="lead">For commissions, collaborations, print inquiries, or anything else, send a message below.</p>
 <form id="contact-form" method="POST"><div class="two"><div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="140" required></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></div></div>
 <div class="field"><label for="phone">Phone number <span>(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" maxlength="40"></div>
